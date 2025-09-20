@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, jsonify
 import pickle
-app = Flask(__name__)
+
+application = Flask(__name__)
+app=application
 
 model = pickle.load(open('models/regressor.pkl', 'rb'))
 scaler = pickle.load(open('models/scaler.pkl', 'rb'))
